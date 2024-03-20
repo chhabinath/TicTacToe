@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 // Import classes for Bundle, View, Button, and Toast
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -83,9 +84,11 @@ public class MainActivity extends AppCompatActivity {
             // Toggle between X and O
             if(flag == 0){
                 currentButton.setText("X");
+                currentButton.setTextColor(Color.parseColor("#015981"));
                 flag = 1;
             }else {
                 currentButton.setText("O");
+                currentButton.setTextColor(Color.parseColor("#FF9800"));
                 flag = 0;
             }
 
@@ -164,4 +167,6 @@ public class MainActivity extends AppCompatActivity {
     public void resetGame(View view){
         newGame();
     }
+
+
 }
